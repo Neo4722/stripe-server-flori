@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flori Mărgelate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Flori Mărgelate</div>
+    <nav>
+      <a href="#">Produse</a>
+      <a href="#checkout">Comandă</a>
+    </nav>
+    <div class="cart-icon" data-count="0">🛒</div>
+  </header>
+
+  <main>
+    <section class="product-grid">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200.png?text=Floare+1" alt="Floare 1">
+        <div class="product-details">
+          <h3>Buchet Rose</h3>
+          <p>45.00 lei</p>
+          <button onclick="addToCart('Buchet Rose', 45)">Adaugă în coș</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200.png?text=Floare+2" alt="Floare 2">
+        <div class="product-details">
+          <h3>Ghirlandă Roz</h3>
+          <p>55.00 lei</p>
+          <button onclick="addToCart('Ghirlandă Roz', 55)">Adaugă în coș</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="checkout">
+      <h2>Coșul tău</h2>
+      <div id="checkout-items"></div>
+      <div class="total" id="checkout-total"></div>
+      <button class="pay-button">Plătește cu cardul</button>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Flori Mărgelate. Toate drepturile rezervate.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
